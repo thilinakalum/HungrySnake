@@ -5,6 +5,8 @@
  */
 package com.bolton.oom.assingment.snake.view;
 
+import com.bolton.oom.assingment.snake.utils.SettingConstant;
+
 /**
  * @author kalum
  */
@@ -16,6 +18,7 @@ public class ResultDialog extends javax.swing.JDialog {
   public ResultDialog(java.awt.Frame parent, boolean modal, int score) {
     super(parent, modal);
     initComponents();
+    setTitle(SettingConstant.NAME_OF_THE_GAME);
     totalScorePointLabel.setText(String.valueOf(score));
     this.setLocationRelativeTo(null);
   }

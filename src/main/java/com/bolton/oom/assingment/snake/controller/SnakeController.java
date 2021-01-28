@@ -17,7 +17,7 @@ import com.bolton.oom.assingment.snake.view.ResultDialog;
 /**
  * @author kalum
  */
-public class SnakeController implements Runnable {
+public class SnakeController extends Thread {
 
   ArrayList<ArrayList<DataOfSquare>> Squares = new ArrayList<ArrayList<DataOfSquare>>();
   Tuple headSnakePos;
