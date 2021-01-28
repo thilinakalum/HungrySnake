@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bolton.oom.assingment.snake;
+package com.bolton.oom.assingment.snake.listener;
 
+import com.bolton.oom.assingment.snake.controller.SnakeController;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 

@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bolton.oom.assingment.snake;
+package com.bolton.oom.assingment.snake.view;
 
+import com.bolton.oom.assingment.snake.listener.EventListener;
+import com.bolton.oom.assingment.snake.model.Tuple;
+import com.bolton.oom.assingment.snake.controller.SnakeController;
+import com.bolton.oom.assingment.snake.utils.SettingConstant;
 import java.awt.GridLayout;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
@@ -26,7 +30,7 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         setTitle("Hungry Snake");
-        setSize(500, 500);
+        setSize(SettingConstant.WINDOW_WIDTH, SettingConstant.WINDOW_HEIGHT);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         

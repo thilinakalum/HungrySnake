@@ -1,7 +1,8 @@
-com\bolton\oom\assingment\snake\Main$1.class
-com\bolton\oom\assingment\snake\SquarePanel.class
-com\bolton\oom\assingment\snake\ThreadsController.class
-com\bolton\oom\assingment\snake\KeyboardListener.class
-com\bolton\oom\assingment\snake\Main.class
-com\bolton\oom\assingment\snake\DataOfSquare.class
-com\bolton\oom\assingment\snake\Tuple.class
+com\bolton\oom\assingment\snake\listener\EventListener.class
+com\bolton\oom\assingment\snake\view\Main$1.class
+com\bolton\oom\assingment\snake\model\Tuple.class
+com\bolton\oom\assingment\snake\view\SquarePanel.class
+com\bolton\oom\assingment\snake\controller\SnakeController.class
+com\bolton\oom\assingment\snake\utils\SettingConstant.class
+com\bolton\oom\assingment\snake\view\Main.class
+com\bolton\oom\assingment\snake\view\DataOfSquare.class

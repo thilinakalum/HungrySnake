@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bolton.oom.assingment.snake;
+package com.bolton.oom.assingment.snake.controller;
 
+import com.bolton.oom.assingment.snake.model.Tuple;
+import com.bolton.oom.assingment.snake.utils.SettingConstant;
+import com.bolton.oom.assingment.snake.view.DataOfSquare;
+import com.bolton.oom.assingment.snake.view.Main;
 import java.util.ArrayList;
 
 /**
@@ -14,9 +18,9 @@ import java.util.ArrayList;
 public class SnakeController extends Thread {
   ArrayList<ArrayList<DataOfSquare>> Squares = new ArrayList<ArrayList<DataOfSquare>>();
   Tuple headSnakePos;
-  int sizeSnake = 3;
+  int sizeSnake = SettingConstant.SNAKE_START_SIZE;
+  long speed = SettingConstant.SPPED;
   int score = 0;
-  long speed = 100;
   public static int directionSnake;
 
   ArrayList<Tuple> positions = new ArrayList<Tuple>();
@@ -26,7 +30,7 @@ public class SnakeController extends Thread {
 	 * Constructor of ControllerThread
 	 * @param positionDepart
 	 */
-  SnakeController(Tuple positionDepart) {
+  public SnakeController(Tuple positionDepart) {
     //Get all the threads
     Squares = Main.Grid;
 

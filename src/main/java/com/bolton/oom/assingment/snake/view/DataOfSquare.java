@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bolton.oom.assingment.snake;
+package com.bolton.oom.assingment.snake.view;
 
+import com.bolton.oom.assingment.snake.utils.SettingConstant;
 import java.awt.Color;
 import java.util.ArrayList;
 
@@ -13,17 +14,15 @@ import java.util.ArrayList;
  * @author kalum
  */
 public class DataOfSquare {
-    //ArrayList that'll contain the colors
   ArrayList<Color> C = new ArrayList<Color>();
-  int color; //2: snake , 1: food, 0:empty
-  SquarePanel square;
+  int color;
+  public SquarePanel square;
 
   public DataOfSquare(int col) {
-
-    //Lets add the color to the arrayList
-    C.add(Color.darkGray);//0
-    C.add(Color.BLUE);    //1
-    C.add(Color.white);   //2
+      
+    C.add(SettingConstant.SNAKE_COLOUR);
+    C.add(SettingConstant.FOOD_COLOUR);
+    C.add(SettingConstant.BACKGROUND_COLOR);
     color = col;
     square = new SquarePanel(C.get(color));
   }

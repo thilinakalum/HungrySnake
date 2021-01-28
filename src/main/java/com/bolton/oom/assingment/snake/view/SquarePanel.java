@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bolton.oom.assingment.snake;
+package com.bolton.oom.assingment.snake.view;
 
 import java.awt.Color;
 

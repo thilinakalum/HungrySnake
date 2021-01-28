@@ -1,6 +1,7 @@
-C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\ThreadsController.java
-C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\SquarePanel.java
-C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\Tuple.java
-C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\DataOfSquare.java
-C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\KeyboardListener.java
-C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\Main.java
+C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\model\Tuple.java
+C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\utils\SettingConstant.java
+C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\view\SquarePanel.java
+C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\view\Main.java
+C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\controller\SnakeController.java
+C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\listener\EventListener.java
+C:\Users\kalum\Documents\NetBeansProjects\HungrySnake\src\main\java\com\bolton\oom\assingment\snake\view\DataOfSquare.java
