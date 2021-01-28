@@ -9,6 +9,7 @@ import com.bolton.oom.assingment.snake.model.Tuple;
 import com.bolton.oom.assingment.snake.utils.SettingConstant;
 import com.bolton.oom.assingment.snake.view.DataOfSquare;
 import com.bolton.oom.assingment.snake.view.Main;
+import com.bolton.oom.assingment.snake.view.ResultDialog;
 import java.util.ArrayList;
 
 /**
@@ -99,6 +100,8 @@ public class SnakeController extends Thread {
 	 */
 	private void stopTheGame() {
     System.out.println("COLISION! \n");
+    ResultDialog resultDialog = new ResultDialog(null, true, this.score);
+    resultDialog.setVisible(true);
     while (true) {
       pauser();
     }

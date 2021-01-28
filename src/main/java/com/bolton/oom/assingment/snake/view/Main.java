@@ -33,6 +33,7 @@ public class Main extends javax.swing.JFrame {
         setSize(SettingConstant.WINDOW_WIDTH, SettingConstant.WINDOW_HEIGHT);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
         
         // Creates the arraylist that'll contain the threads
     Grid = new ArrayList<ArrayList<DataOfSquare>>();
@@ -58,12 +59,8 @@ public class Main extends javax.swing.JFrame {
       }
     }
 
-    // initial position of the snake
-    Tuple position = new Tuple(20, 20);
-    // passing this value to the controller
-    SnakeController c = new SnakeController(position);
-    //Let's start the game now..
-    c.start();
+    StartDialog s = new StartDialog(this, rootPaneCheckingEnabled);
+    s.setVisible(true);
     
     // Links the window to the keyboardlistenner.
     this.addKeyListener((KeyListener) new EventListener());
@@ -105,7 +102,7 @@ public class Main extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
