@@ -5,23 +5,20 @@
  */
 package com.bolton.oom.assingment.snake.listener;
 
-import com.bolton.oom.assingment.snake.controller.SnakeController;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+import com.bolton.oom.assingment.snake.controller.SnakeController;
+
 /**
- *
  * @author kalum
  */
 public class EventListener extends KeyAdapter {
 
   /**
    * Key press event
-   * @param event
-   *  39: Right
-   *  38: Top
-   *  37: Left
-   *  40: Bottom
+   *
+   * @param event 39: Right 38: Top 37: Left 40: Bottom
    */
   public void keyPressed(KeyEvent event) {
     switch (event.getKeyCode()) {

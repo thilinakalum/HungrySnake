@@ -6,10 +6,10 @@
 package com.bolton.oom.assingment.snake.model;
 
 /**
- *
  * @author kalum
  */
 public class Tuple {
+
   public int x;
   public int y;
   public int xf;

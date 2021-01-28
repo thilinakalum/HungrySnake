@@ -5,18 +5,19 @@
  */
 package com.bolton.oom.assingment.snake.controller;
 
+import java.util.ArrayList;
+
 import com.bolton.oom.assingment.snake.model.Tuple;
 import com.bolton.oom.assingment.snake.utils.SettingConstant;
 import com.bolton.oom.assingment.snake.view.DataOfSquare;
 import com.bolton.oom.assingment.snake.view.Main;
 import com.bolton.oom.assingment.snake.view.ResultDialog;
-import java.util.ArrayList;
 
 /**
- *
  * @author kalum
  */
 public class SnakeController extends Thread {
+
   ArrayList<ArrayList<DataOfSquare>> Squares = new ArrayList<ArrayList<DataOfSquare>>();
   Tuple headSnakePos;
   int sizeSnake = SettingConstant.SNAKE_START_SIZE;
@@ -27,10 +28,11 @@ public class SnakeController extends Thread {
   ArrayList<Tuple> positions = new ArrayList<Tuple>();
   Tuple foodPosition;
 
-	/**
-	 * Constructor of ControllerThread
-	 * @param positionDepart
-	 */
+  /**
+   * Constructor of ControllerThread
+   *
+   * @param positionDepart
+   */
   public SnakeController(Tuple positionDepart) {
     //Get all the threads
     Squares = Main.Grid;
@@ -58,9 +60,9 @@ public class SnakeController extends Thread {
     }
   }
 
-	/**
-	 * delay between each move of the snake
-	 */
+  /**
+   * delay between each move of the snake
+   */
   private void pauser() {
     try {
       sleep(speed);
@@ -69,9 +71,9 @@ public class SnakeController extends Thread {
     }
   }
 
-	/**
-	 * Checking if the snake bites itself or is eating
-	 */
+  /**
+   * Checking if the snake bites itself or is eating
+   */
   private void checkCollision() {
     Tuple posCritique = positions.get(positions.size() - 1);
     for (int i = 0; i <= positions.size() - 2; i++) {
@@ -95,10 +97,10 @@ public class SnakeController extends Thread {
     }
   }
 
-	/**
-	 * Stops The Game
-	 */
-	private void stopTheGame() {
+  /**
+   * Stops The Game
+   */
+  private void stopTheGame() {
     System.out.println("COLISION! \n");
     ResultDialog resultDialog = new ResultDialog(null, true, this.score);
     resultDialog.setVisible(true);
@@ -108,17 +110,18 @@ public class SnakeController extends Thread {
   }
 
 
-	/**
-	 * Put food in a position and displays it
-	 * @param foodPositionIn
-	 */
+  /**
+   * Put food in a position and displays it
+   *
+   * @param foodPositionIn
+   */
   private void spawnFood(Tuple foodPositionIn) {
     Squares.get(foodPositionIn.x).get(foodPositionIn.y).lightMeUp(1);
   }
 
-	/**
-	 * return a position not occupied by the snake
-	 */
+  /**
+   * return a position not occupied by the snake
+   */
   private Tuple getValAleaNotInSnake() {
     Tuple p;
     int ranX = 0 + (int) (Math.random() * 19);
@@ -135,15 +138,11 @@ public class SnakeController extends Thread {
     return p;
   }
 
-	/**
-	 * Moves the head of the snake and refreshes the positions in the arraylist
-	 * @param dir
-	 *  1:right
-	 *  2:left
-	 *  3:top
-	 *  4:bottom
-	 *  0:nothing
-	 */
+  /**
+   * Moves the head of the snake and refreshes the positions in the arraylist
+   *
+   * @param dir 1:right 2:left 3:top 4:bottom 0:nothing
+   */
   private void moveInterne(int dir) {
     switch (dir) {
       case 4:
@@ -174,9 +173,9 @@ public class SnakeController extends Thread {
     }
   }
 
-	/**
-	 * Refresh the squares that needs to be
-	 */
+  /**
+   * Refresh the squares that needs to be
+   */
   private void moveExterne() {
     for (Tuple t : positions) {
       int y = t.getX();
@@ -186,10 +185,10 @@ public class SnakeController extends Thread {
     }
   }
 
-	/**
-	 * Refreshes the tail of the snake, by removing the superfluous data in positions arraylist
-	 * and refreshing the display of the things that is removed
-	 */
+  /**
+   * Refreshes the tail of the snake, by removing the superfluous data in positions arraylist and
+   * refreshing the display of the things that is removed
+   */
   private void deleteTail() {
     int cmpt = sizeSnake;
     for (int i = positions.size() - 1; i >= 0; i--) {
