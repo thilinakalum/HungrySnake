@@ -7,6 +7,7 @@ package com.bolton.oom.assingment.snake.controller;
 
 import java.util.ArrayList;
 
+import com.bolton.oom.assingment.snake.exceptions.SnakeException;
 import com.bolton.oom.assingment.snake.model.Tuple;
 import com.bolton.oom.assingment.snake.utils.SettingConstant;
 import com.bolton.oom.assingment.snake.view.DataOfSquare;
@@ -16,7 +17,7 @@ import com.bolton.oom.assingment.snake.view.ResultDialog;
 /**
  * @author kalum
  */
-public class SnakeController extends Thread {
+public class SnakeController implements Runnable {
 
   ArrayList<ArrayList<DataOfSquare>> Squares = new ArrayList<ArrayList<DataOfSquare>>();
   Tuple headSnakePos;
@@ -49,7 +50,7 @@ public class SnakeController extends Thread {
 
   }
 
-  //Important part :
+  @Override
   public void run() {
     while (true) {
       moveInterne(directionSnake);
@@ -65,7 +66,7 @@ public class SnakeController extends Thread {
    */
   private void pauser() {
     try {
-      sleep(speed);
+      Thread.sleep(speed);
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
