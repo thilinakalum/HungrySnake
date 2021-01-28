@@ -29,7 +29,7 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
-        setTitle("Hungry Snake");
+        setTitle(SettingConstant.NAME_OF_THE_GAME);
         setSize(SettingConstant.WINDOW_WIDTH, SettingConstant.WINDOW_HEIGHT);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
